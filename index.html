@@ -505,6 +505,48 @@
 
 <body class="bg-[#fffff] text-[#121c2a] antialiased selection:bg-blue-100 overflow-x-hidden">
 
+  <!-- LEFT SIDE FLOATING CTAs -->
+  <div class="fixed left-0 top-1/2 -translate-y-1/2 z-[999] flex flex-col items-center gap-0 shadow-xl" style="font-family:'Manrope',sans-serif;">
+
+    <!-- Enquiry Now -->
+    <button onclick="handleApplyNowClick(); document.getElementById('hero-slide-2')?.scrollIntoView({behavior:'smooth',block:'center'});"
+      class="group flex items-center bg-[#1769E0] hover:bg-[#1255c0] text-white transition-all duration-300 overflow-hidden"
+      style="writing-mode:vertical-rl; text-orientation:mixed; padding:18px 10px; border-radius:0 8px 8px 0; gap:0;">
+      <span class="text-[11px] font-bold tracking-widest uppercase rotate-180 whitespace-nowrap">Enquiry Now</span>
+    </button>
+
+    <!-- Divider -->
+    <div class="w-full h-[1px] bg-white/30"></div>
+
+    <!-- Call Us -->
+    <a href="tel:+912266282000" title="Call Us"
+      class="flex items-center justify-center w-10 h-10 bg-[#22c55e] hover:bg-[#16a34a] text-white transition-colors"
+      style="border-radius:0;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+      </svg>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:admissions@tcetuniversity.ac.in" title="Email Us"
+      class="flex items-center justify-center w-10 h-10 bg-[#f59e0b] hover:bg-[#d97706] text-white transition-colors"
+      style="border-radius:0;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/912266282000" target="_blank" rel="noopener" title="WhatsApp"
+      class="flex items-center justify-center w-10 h-10 bg-[#25D366] hover:bg-[#1ebe5d] text-white transition-colors"
+      style="border-radius:0 0 8px 0;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+
   <section class="hero-landing w-full flex flex-col bg-[#f4f6fa] pt-[124px] lg:pt-[144px] pb-8 lg:pb-10">
 
     <nav
@@ -525,8 +567,8 @@
           <img alt="25 Years of Legacy" class="h-20 lg:h-26 w-auto object-contain" src="Assets/25logo.webp" />
         </div>
         <div class="md:hidden flex items-center justify-between w-full">
-          <img alt="TCET Logo" class="h-12 w-auto object-contain" src="Assets/tcet.webp" />
-          <img alt="25 Years of Legacy" class="h-12 w-auto object-contain" src="assets/25logo.webp" />
+          <img alt="TCET Logo" class="h-16 w-auto object-contain" src="Assets/tcet.webp" />
+          <img alt="25 Years of Legacy" class="h-14 w-auto object-contain" src="assets/25logo.webp" />
         </div>
       </div>
     </nav>
@@ -702,7 +744,7 @@
 
           <!-- Slide 2 (Form) -->
           <div id="hero-slide-2"
-            class="absolute inset-0 bg-[#F5F9FF] p-7 lg:p-10 flex flex-col justify-center transition-opacity duration-500 opacity-0 z-0 pointer-events-none overflow-y-auto">
+            class="absolute inset-0 bg-[#F5F9FF] p-7 lg:p-10 flex flex-col justify-center transition-opacity duration-500 opacity-0 z-0 pointer-events-none">
             <div
               class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start h-full pr-[90px] lg:pr-[120px] xl:pr-[130px]">
 
@@ -1610,7 +1652,7 @@
         });
       </script>
 
-      <section class="w-full bg-[#f6f8fb] py-16 px-4 sm:px-6 lg:px-8 font-manrope">
+      <section class="w-full bg-[#f6f8fb] py-16 px-4 sm:px-6 lg:px-8 font-manrope min-h-screen">
         <div class="max-w-7xl mx-auto">
 
           <!-- Section 1: Header -->
@@ -1634,11 +1676,11 @@
           </div>
 
           <!-- Section 2: Institute Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10" id="school-cards-container">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 lg:items-stretch" id="school-cards-container">
 
             <!-- Card 1: TSET -->
             <div id="card-tset" onclick="selectSchool('tset')"
-              class="school-card relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+              class="school-card relative h-[420px] lg:h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
               <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="TSET - Engineering" />
@@ -1663,7 +1705,7 @@
 
             <!-- Card 2: TSBM -->
             <div id="card-tsbm" onclick="selectSchool('tsbm')"
-              class="school-card relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+              class="school-card relative h-[420px] lg:h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="TSBM - Business" />
@@ -1688,7 +1730,7 @@
 
             <!-- Card 3: TSCA -->
             <div id="card-tsca" onclick="selectSchool('tsca')"
-              class="school-card relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+              class="school-card relative h-[420px] lg:h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="TSCA - Computer Application" />
@@ -1713,7 +1755,7 @@
 
             <!-- Card 4: TSHSE -->
             <div id="card-tshse" onclick="selectSchool('tshse')"
-              class="school-card relative h-[420px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+              class="school-card relative h-[420px] lg:h-[480px] rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
               <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="TSHSE - Higher Education" />
@@ -1739,10 +1781,10 @@
 
           <!-- Section 3: Detailed Expanding View (Hidden by default, shown via JS) -->
           <div id="details-section"
-            class="hidden bg-white rounded-[2rem] p-3 shadow-xl shadow-blue-900/5 border border-gray-100 flex-col lg:flex-row gap-6 mt-6 transition-all duration-500 scroll-mt-24">
+            class="hidden bg-white rounded-[2rem] p-3 shadow-xl shadow-blue-900/5 border border-gray-100 flex-col lg:flex-row gap-6 mt-6 transition-all duration-500 lg:h-[520px]">
 
             <!-- Left Detail Image -->
-            <div class="w-full lg:w-[28%]">
+            <div class="w-full lg:w-[28%] lg:h-full">
               <div class="rounded-[1.5rem] overflow-hidden h-full min-h-[300px] lg:min-h-full relative bg-gray-100">
                 <img id="detail-image" src=""
                   class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
@@ -1751,7 +1793,7 @@
             </div>
 
             <!-- Right Detail Content -->
-            <div class="w-full lg:w-[72%] py-4 pr-4 lg:pr-8">
+            <div class="w-full lg:w-[72%] py-4 pr-4 lg:pr-8 lg:flex lg:flex-col">
 
               <!-- Detail Header -->
               <div class="flex justify-between items-start mb-6">
@@ -1782,8 +1824,10 @@
               </div>
 
               <!-- Programmes Grid List (Generated via JS) -->
+              <div id="programs-list-wrapper" class="lg:flex-1 lg:overflow-y-auto lg:min-h-0">
               <div id="programs-list" class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-0 pb-4">
                 <!-- List items will be injected here -->
+              </div>
               </div>
             </div>
           </div>
@@ -1992,7 +2036,7 @@
 
         let currentSchoolId = '';
 
-        function selectSchool(schoolId) {
+        function selectSchool(schoolId, noScroll) {
           currentSchoolId = schoolId;
           const data = schoolsData[schoolId];
 
@@ -2041,9 +2085,11 @@
           detailsSection.classList.remove('hidden');
           detailsSection.classList.add('flex');
 
-          setTimeout(() => {
-            detailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 150);
+          if (!noScroll) {
+            setTimeout(() => {
+              detailsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 150);
+          }
         }
 
         function renderProgramsList(category) {
@@ -2119,6 +2165,11 @@
             card.classList.remove('outline', 'outline-4', 'outline-blue-200/60', 'shadow-lg', 'shadow-blue-100/50');
           });
         }
+
+        // Open TSET by default on page load
+        document.addEventListener('DOMContentLoaded', () => {
+          selectSchool('tset', true);
+        });
       </script>
       <section id="scroll-deck-section" class="relative h-[350vh] w-full font-manrope"
         style="background: linear-gradient(135deg, #F5F9FF 0%, #EAF3FF 100%);">
@@ -2528,8 +2579,17 @@
     <!-- Edge-to-Edge Container -->
     <div class="relative w-full overflow-hidden pb-8 flex">
 
-      <!-- Track that animates right to left -->
-     <div class="flex flex-nowrap gap-6 pr-6 w-max animate-marquee-rtl hover:pause-animation">
+      <!-- Mobile Carousel Wrapper (visible only on mobile) -->
+      <div id="testimonial-mobile-carousel" class="md:hidden w-full px-4 relative">
+        <div id="testimonial-mobile-track" class="flex transition-transform duration-500 ease-in-out gap-4">
+          <!-- Cards injected by JS -->
+        </div>
+        <!-- Dots -->
+        <div id="testimonial-dots" class="flex justify-center gap-2 mt-5"></div>
+      </div>
+
+      <!-- Track that animates right to left (desktop only) -->
+     <div class="hidden md:flex flex-nowrap gap-6 pr-6 w-max animate-marquee-rtl hover:pause-animation">
 
         <!-- ================= CARD SET 1 ================= -->
 
@@ -3000,6 +3060,69 @@
       </div>
     </div>
   </section>
+
+  <script>
+  (function () {
+    if (window.innerWidth >= 768) return; // desktop uses marquee
+
+    // Collect all unique cards from the first set (first 7 children of the marquee track)
+    const desktopTrack = document.querySelector('.animate-marquee-rtl');
+    if (!desktopTrack) return;
+    const allCards = Array.from(desktopTrack.children);
+    // Use only first half (set 1) to avoid duplicates
+    const half = Math.floor(allCards.length / 2);
+    const cards = allCards.slice(0, half);
+
+    const mobileTrack = document.getElementById('testimonial-mobile-track');
+    const dotsContainer = document.getElementById('testimonial-dots');
+    let current = 0;
+    let autoTimer = null;
+    let isPaused = false;
+
+    // Clone cards into mobile track
+    cards.forEach((card, i) => {
+      const clone = card.cloneNode(true);
+      clone.style.cssText = 'flex: 0 0 100%; width: 100%; height: auto; min-height: 0;';
+      mobileTrack.appendChild(clone);
+
+      // Dot
+      const dot = document.createElement('button');
+      dot.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === 0 ? 'bg-[#27054F] w-4' : 'bg-[#D9CCFF]');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => { goTo(i); resetTimer(); });
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+      current = (index + cards.length) % cards.length;
+      mobileTrack.style.transform = 'translateX(calc(-' + current + ' * (100% + 16px)))';
+      Array.from(dotsContainer.children).forEach((d, i) => {
+        d.className = 'w-2 h-2 rounded-full transition-all duration-300 ' + (i === current ? 'bg-[#27054F] w-4' : 'bg-[#D9CCFF]');
+      });
+    }
+
+    function startTimer() {
+      autoTimer = setInterval(() => {
+        if (!isPaused) goTo(current + 1);
+      }, 3000);
+    }
+
+    function resetTimer() {
+      clearInterval(autoTimer);
+      startTimer();
+    }
+
+    // Touch pause/resume
+    const carousel = document.getElementById('testimonial-mobile-carousel');
+    carousel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+    carousel.addEventListener('touchend', () => {
+      isPaused = false;
+      resetTimer();
+    }, { passive: true });
+
+    startTimer();
+  })();
+  </script>
 
   <!-- CSS Animation Styles -->
   <style>
