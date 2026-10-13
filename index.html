@@ -1383,7 +1383,7 @@
           <div class="lg:col-span-7">
             <div class="inline-block relative mb-8 px-2 py-1.5">
               <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#243565]"></div>
-              <span class="text-xs font-bold uppercase tracking-wider text-[#243565]">WHY CHOOSE TCETU</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-[#243565]">WHY CHOOSE TCET University</span>
               <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#243565]"></div>
             </div>
 
@@ -1395,7 +1395,7 @@
 
           <div class="lg:col-span-5 lg:pb-3">
             <p class="text-[17px] leading-[1.7] text-[#3B3C4B]">
-              TCETU combines a strong academic foundation with research-driven learning, institutional autonomy and
+              TCET University combines a strong academic foundation with research-driven learning, institutional autonomy and
               industry partnerships to equip students for emerging opportunities and global challenges.
             </p>
           </div>
@@ -1617,7 +1617,7 @@
           <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
             <div class="max-w-xl">
               <p class="text-blue-600 font-semibold text-xs tracking-widest uppercase mb-3 flex items-center">
-                OUR COURSES <span class="ml-1 text-blue-300">]</span>
+              [  OUR COURSES <span class="ml-1 text-blue-300">]</span>
               </p>
               <h2 class="text-3xl md:text-5xl font-bold text-[#0f172a] leading-tight tracking-tight font-urbanist">
                 Explore TCET University:<br />
@@ -1791,9 +1791,10 @@
         </div>
       </section>
 
-      <!-- Functionality Script -->
+     <!-- Functionality Script -->
+   <!-- Functionality Script -->
       <script>
-        // Embedded content structure mapped from user requirements
+        // Restructured content mapping to render properly in UI boxes/cards
         const schoolsData = {
           'tset': {
             code: 'TSET',
@@ -1802,52 +1803,76 @@
             imgUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
             programs: {
               'UG Programmes': [
-                'B.Tech. (Artificial Intelligence and Data Science)',
-                'B.Tech. (Artificial Intelligence and Machine Learning)',
-                'B.Tech. (Civil Engineering)',
-                'B.Tech. (Computer Engineering)',
-                'B.Tech. (Computer Science and Engineering - Cyber Security)',
-                'B.Tech. (Computer Science and Engineering - IoT)',
-                'B.Tech. (Electronics and Computer Science)',
-                'B.Tech. (Electronics and Telecommunication Engineering)',
-                'B.Tech. (Information Technology)',
-                'B.Tech. (Mechanical and Mechatronics Engineering - Additive Manufacturing)',
-                'B.Tech. (Mechanical Engineering)'
+                {
+                  title: 'B.Tech. Programmes',
+                  items: [
+                    'Artificial Intelligence and Data Science',
+                    'Artificial Intelligence and Machine Learning',
+                    'Civil Engineering',
+                    'Computer Engineering',
+                    'Computer Science and Engineering - Cyber Security',
+                    'Computer Science and Engineering - IoT',
+                    'Electronics and Computer Science',
+                    'Electronics and Telecommunications Engineering',
+                    'Information Technology',
+                    'Mechanical and Mechatronics Engineering',
+                    'Mechanical Engineering'
+                  ]
+                },
+                {
+                  title: 'B.Tech. (Proposed)',
+                  proposed: true,
+                  items: ['Computer Science & Engineering - Data Science']
+                }
               ],
               'B.Voc. Programmes': [
-                'B.Voc. (Animation, Graphic Designing & VFX)',
-                'B.Voc. (Artificial Intelligence & Data Science)',
-                'B.Voc. (Generative AI)',
-                'B.Voc. (Software Development & Cloud Technologies)'
+                {
+                  title: 'B.Voc. Programmes',
+                  items: [
+                    'Animation, Graphic Designing & VFX',
+                    'Artificial Intelligence & Data Science',
+                    'Generative AI',
+                    'Software Development & Cloud Technologies'
+                  ]
+                }
               ],
               'PG Programmes': [
-                'M.Tech. (Artificial Intelligence & Data Science)',
-                'M.Tech. (Civil Engineering)',
-                'M.Tech. (Communication Technology & Management)',
-                'M.Tech. (Computer Engineering)',
-                'M.Tech. (Information Technology)',
-                'M.Tech. (Mechanical Engineering)'
+                {
+                  title: 'M.Tech. Programmes',
+                  items: [
+                    'Artificial Intelligence & Data Science',
+                    'Civil Engineering',
+                    'Communication Technology & Management',
+                    'Computer Engineering',
+                    'Information Technology',
+                    'Mechanical Engineering'
+                  ]
+                },
+                {
+                  title: 'M.Tech. (Proposed)',
+                  proposed: true,
+                  items: ['Structural Engineering']
+                }
               ],
-              'Ph.D. Programmes': [
-                'Ph.D. (Artificial Intelligence)',
-                'Ph.D. (Civil Engineering)',
-                'Ph.D. (Computer Engineering)',
-                'Ph.D. (Computer Science and Engineering)',
-                'Ph.D. (Cyber Security)',
-                'Ph.D. (Data Science)',
-                'Ph.D. (Electronics and Computer Science)',
-                'Ph.D. (Electronics and Telecommunication Engineering)',
-                'Ph.D. (Information Technology)',
-                'Ph.D. (Internet of Things)',
-                'Ph.D. (Machine Learning)',
-                'Ph.D. (Mechanical and Mechatronics Engineering)',
-                'Ph.D. (Mechanical Engineering)'
+              'M.Voc. Programmes': [
+                {
+                  title: 'M.Voc. Programmes',
+                  items: [
+                    'Animation, Graphic Designing & VFX',
+                    'Artificial Intelligence & Data Science',
+                    'Cloud Technologies & Infrastructure Management'
+                  ]
+                }
               ],
               'Working Professional': [
-                'UG: B.Tech - Computer Engineering',
-                'UG: B.Tech - Artificial Intelligence & Data Science',
-                'PG: M.Tech - Computer Engineering',
-                'PG: M.Tech - Information & Technology'
+                {
+                  title: 'B.Tech (Working Professional)',
+                  items: ['Computer Engineering', 'Artificial Intelligence & Data Science']
+                },
+                {
+                  title: 'M.Tech (Working Professional)',
+                  items: ['Computer Engineering', 'Information & Technology']
+                }
               ]
             }
           },
@@ -1858,47 +1883,62 @@
             imgUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800',
             programs: {
               'UG Programmes': [
-                'BBA - Human Resources',
-                'BBA - Finance',
-                'BBA - Operations',
-                'BBA - Marketing',
-                'BBA (Honours) - AI & Business Analytics',
-                'BBA (Honours) - Digital Marketing & Branding',
-                'BBA (Honours) - Financial Markets & Services',
-                'BBA (Honours) - Human Resource Analytics',
-                'BBA (Honours) - Operations & Logistics',
-                'Integrated MBA Degree Programme (5 Years)'
+                {
+                  title: 'BBA (Bachelor of Business Administration)',
+                  duration: '3 Years (4 years for Honours/Honours with Research)',
+                  items: ['Human Resources', 'Finance', 'Operations', 'Marketing']
+                },
+                {
+                  title: 'BBA (Honours / Honours with Research)',
+                  duration: '4 Years',
+                  items: ['AI & Business Analytics', 'Digital Marketing & Branding', 'Financial Markets & Services', 'Human Resource Analytics', 'Operations & Logistics']
+                },
+                {
+                  title: 'Integrated MBA',
+                  duration: '5 Years',
+                  items: []
+                }
               ],
               'PG Programmes': [
-                'MBA - Operations & Supply Chain Management',
-                'MBA - AI & Business Analytics',
-                'MBA - Project Management',
-                'MBA - Entrepreneurship & Family Business',
-                'MBA - Marketing',
-                'MBA - Human Resource Management',
-                'MBA - Finance'
+                {
+                  title: 'MBA (Master of Business Administration)',
+                  duration: '2 Years',
+                  items: ['Operations & Supply Chain Management', 'Entrepreneurship & Family Business', 'Marketing', 'Human Resource Management', 'Finance']
+                },
+                {
+                  title: 'MBA - AI & Business Analytics',
+                  duration: '2 Years',
+                  proposed: true,
+                  items: []
+                },
+                {
+                  title: 'MBA - Working Professional',
+                  duration: '2 Years',
+                  proposed: true,
+                  items: []
+                }
               ]
             }
           },
           'tsca': {
             code: 'TSCA',
-            title: 'Thakur School of Computer Application (TSCA)',
+            title: 'Thakur School of Computer Applications (TSCA)',
             desc: 'Pioneering advanced computing education and software development skills.',
             imgUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800',
             programs: {
               'UG Programmes': [
-                'BCA - Artificial Intelligence & Data Science',
-                'BCA - Network & Security',
-                'BCA - Software Development',
-                'BCA (Honours) - Artificial Intelligence & Data Science',
-                'BCA (Honours) - Network & Security',
-                'BCA (Honours) - Software Development'
+                {
+                  title: 'BCA (Bachelor of Computer Applications)',
+                  duration: '3 Years (4 years for Honours/Honours with Research)',
+                  items: ['Artificial Intelligence & Data Science', 'Network & Security', 'Software Development']
+                }
               ],
               'PG Programmes': [
-                'MCA (Master of Computer Applications)',
-                'MCA (Data Science & Intelligent Systems)',
-                'MCA (Cloud Computing & Cyber Security)',
-                'MCA (Enterprise Software Engineering)'
+                {
+                  title: 'MCA (Master of Computer Applications)',
+                  duration: '2 Years',
+                  items: ['Data Science & Intelligent Systems', 'Cloud Computing & Cyber Security', 'Enterprise Software Engineering']
+                }
               ]
             }
           },
@@ -1909,54 +1949,42 @@
             imgUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800',
             programs: {
               'UG Programmes': [
-                'B.Sc. (Artificial Intelligence & Machine Learning)',
-                'B.Sc. (Biotechnology)',
-                'B.Sc. (Computer Science)',
-                'B.Sc. (Data Science)',
-                'B.Com. (Accounting & Finance)',
-                'B.Com. (Business Analytics)',
-                'B.Com. (Capital Markets)',
-                'B.Com. (Investment Banking)',
-                'B.A in Liberal and Interdisciplinary Studies',
-                'Short-term Courses in Languages (German, Japanese, Mandarin)'
+                {
+                  title: 'B.Sc. (Bachelor of Science)',
+                  duration: '3 Years (4 years for Honours/Honours with Research)',
+                  items: ['Artificial Intelligence & Machine Learning', 'Biotechnology', 'Computer Science', 'Data Science', 'Cybersecurity & Digital Forensics']
+                },
+                {
+                  title: 'B.Com. (Bachelor of Commerce)',
+                  duration: '3 Years (4 years for Honours/Honours with Research)',
+                  items: ['Accounting & Finance', 'Business Analytics', 'Capital Markets', 'Investment Banking']
+                },
+                {
+                  title: 'B.A. (Bachelor of Arts)',
+                  duration: '3 Years (4 years for Honours/Honours with Research)',
+                  items: ['Liberal and Interdisciplinary Studies']
+                },
+                {
+                  title: 'Short-term Courses in Languages',
+                  items: ['German', 'Japanese', 'Mandarin']
+                }
               ],
               'PG Programmes': [
-                'M.Sc. (Biotechnology)',
-                'M.Sc. (Artificial Intelligence & Machine Learning)',
-                'M.Sc. (Computer Science)',
-                'M.Sc. (Data Science)',
-                'M.Com. (Accounting & Finance)',
-                'M.Com. (Business Analytics)',
-                'M.Com. (Capital Markets)',
-                'M.Com. (Investment Banking)',
-                'M.A in Liberal and Interdisciplinary Studies'
-              ],
-              'Ph.D. Programmes': [
-                'Ph.D. (Business Studies)',
-                'Ph.D. (Business Analytics & AI)',
-                'Ph.D. (Accounting & Finance)',
-                'Ph.D. (Banking & Insurance)',
-                'Ph.D. (Investment Banking)',
-                'Ph.D. (Securities Market)',
-                'Ph.D. (Capital Markets)',
-                'Ph.D. (FinTech)',
-                'Ph.D. (Global Finance)',
-                'Ph.D. (Artificial Intelligence & Machine Learning)',
-                'Ph.D. (Computer Science)',
-                'Ph.D. (Data Science)',
-                'Ph.D. (Biotechnology)',
-                'Ph.D. (Information Technology)',
-                'Ph.D. (Physics)',
-                'Ph.D. (Chemistry)',
-                'Ph.D. (Mathematics)',
-                'Ph.D. (Zoology)',
-                'Ph.D. (Languages)',
-                'Ph.D. (Liberal Arts)',
-                'Ph.D. (Interdisciplinary Studies)',
-                'Ph.D. (Psychology)',
-                'Ph.D. (Sociology)',
-                'Ph.D. (Political Science)',
-                'Ph.D. (Economics)'
+                {
+                  title: 'M.Sc. (Master of Science)',
+                  duration: '2 Years',
+                  items: ['Biotechnology', 'Artificial Intelligence & Machine Learning', 'Computer Science', 'Data Science']
+                },
+                {
+                  title: 'M.Com. (Master of Commerce)',
+                  duration: '2 Years',
+                  items: ['Accounting & Finance', 'Business Analytics', 'Capital Markets', 'Investment Banking']
+                },
+                {
+                  title: 'M.A. (Master of Arts)',
+                  duration: '2 Years',
+                  items: ['Liberal and Interdisciplinary Studies']
+                }
               ]
             }
           }
@@ -1990,7 +2018,6 @@
             const btn = document.createElement('button');
             btn.innerText = category;
 
-            // Base styling for tabs
             const activeStyle = "bg-blue-600 text-white px-4 py-2.5 rounded-lg text-xs font-semibold flex-1 min-w-fit text-center whitespace-nowrap shadow-sm tab-btn";
             const inactiveStyle = "text-blue-700 hover:bg-blue-100/60 px-4 py-2.5 rounded-lg text-xs font-medium flex-1 min-w-fit text-center whitespace-nowrap transition-colors tab-btn";
 
@@ -2004,19 +2031,16 @@
 
             tabsContainer.appendChild(btn);
 
-            // Automatically render first category
             if (isFirst) {
               renderProgramsList(category);
               isFirst = false;
             }
           }
 
-          // Show section and scroll down smoothly
           const detailsSection = document.getElementById('details-section');
           detailsSection.classList.remove('hidden');
           detailsSection.classList.add('flex');
 
-          // Small timeout allows the DOM to render the un-hidden section before scrolling
           setTimeout(() => {
             detailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 150);
@@ -2026,23 +2050,63 @@
           const dataList = schoolsData[currentSchoolId].programs[category];
 
           document.getElementById('list-title').innerText = category;
-          document.getElementById('list-count').innerText = `Total ${dataList.length} Programmes`;
+          document.getElementById('list-count').innerText = ''; // Clear count
 
           const listContainer = document.getElementById('programs-list');
-          listContainer.innerHTML = ''; // Clear previous list
+          listContainer.innerHTML = ''; 
 
-          dataList.forEach((prog, index) => {
-            const num = (index + 1).toString().padStart(2, '0');
-            const html = `
-                <a href="#" class="flex items-center justify-between py-3.5 border-b border-gray-100 group hover:pl-2 transition-all duration-200">
-                    <div class="flex items-center gap-4">
-                        <span class="text-blue-800 font-bold text-xs bg-blue-50 px-2 py-1 rounded w-8 text-center flex-shrink-0">${num}</span>
-                        <span class="text-gray-700 text-sm font-medium group-hover:text-blue-600 transition-colors">${prog}</span>
+          // Change to grid for boxed layout
+          listContainer.className = 'grid grid-cols-1 md:grid-cols-2 gap-4 pb-4 items-start';
+
+          dataList.forEach((prog) => {
+            // Generate list items for specialisations
+            let itemsHtml = '';
+            if (prog.items && prog.items.length > 0) {
+              const listItems = prog.items.map(item => `
+                <li class="flex items-start gap-2 text-sm text-gray-700 leading-snug">
+                  <span class="text-blue-500 mt-0.5 flex-shrink-0">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                  </span>
+                  ${item}
+                </li>
+              `).join('');
+              
+              itemsHtml = `
+                <div class="mt-4 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-3">Specialisations / Streams</p>
+                  <ul class="space-y-2.5">
+                    ${listItems}
+                  </ul>
+                </div>
+              `;
+            }
+
+            // Duration Badge
+            const durationHtml = prog.duration 
+              ? `<div class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md mb-2">
+                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                   Duration: ${prog.duration}
+                 </div>` 
+              : '';
+
+            // Proposed Badge
+            const proposedHtml = prog.proposed
+              ? `<span class="mt-3 inline-block px-2.5 py-1 bg-yellow-100 text-yellow-800 border border-yellow-200 text-[11px] font-bold rounded-md uppercase tracking-wide">* Proposed Programme</span>`
+              : '';
+
+            // Assemble Card
+            const cardHtml = `
+                <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
+                    <h5 class="font-bold text-gray-900 text-lg leading-tight mb-2">${prog.title}</h5>
+                    ${durationHtml}
+                    <div class="flex-grow">
+                      ${itemsHtml}
                     </div>
-                    <svg class="w-4 h-4 text-gray-400 group-hover:text-blue-600 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </a>
+                    ${proposedHtml}
+                </div>
             `;
-            listContainer.insertAdjacentHTML('beforeend', html);
+            
+            listContainer.insertAdjacentHTML('beforeend', cardHtml);
           });
         }
 
@@ -2051,13 +2115,11 @@
           detailsSection.classList.add('hidden');
           detailsSection.classList.remove('flex');
 
-          // Remove active states from all cards
           document.querySelectorAll('.school-card').forEach(card => {
             card.classList.remove('outline', 'outline-4', 'outline-blue-200/60', 'shadow-lg', 'shadow-blue-100/50');
           });
         }
       </script>
-
       <section id="scroll-deck-section" class="relative h-[350vh] w-full font-manrope"
         style="background: linear-gradient(135deg, #F5F9FF 0%, #EAF3FF 100%);">
         <!-- HEADING SECTION -->
@@ -2078,7 +2140,7 @@
 
       <!-- Main Heading -->
       <h2 class="text-[40px] md:text-5xl lg:text-[56px] font-semibold text-[#1E1E1E] leading-[1.15] tracking-tight">
-        How to Apply to TCETU
+        How to Apply to TCET University
       </h2>
     </div>
 
@@ -2086,7 +2148,7 @@
     <div class="max-w-[420px] lg:pb-3">
       <p class="text-[17px] leading-[1.7] text-[#3B3C4B]">
         Follow our streamlined application steps to seamlessly complete your registration, verify your
-        documents, and secure your admission to TCETU.
+        documents, and secure your admission to TCET University.
       </p>
     </div>
   </div>
@@ -2467,7 +2529,7 @@
     <div class="relative w-full overflow-hidden pb-8 flex">
 
       <!-- Track that animates right to left -->
-      <div class="flex flex-nowrap gap-6 pr-6 w-max animate-marquee-rtl hover:pause-animation">
+     <div class="flex flex-nowrap gap-6 pr-6 w-max animate-marquee-rtl hover:pause-animation">
 
         <!-- ================= CARD SET 1 ================= -->
 
@@ -2485,8 +2547,7 @@
               </svg>
             </div>
             <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              “TCET shaped my career through strong placement support, leadership opportunities and inspiring faculty.
-              The friendships and memories remain cherished.”
+              “TCET shaped my career through strong placement support, leadership opportunities and inspiring faculty. The friendships and memories remain cherished.”
             </p>
             <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -2497,9 +2558,9 @@
             <div class="flex items-end justify-between mt-auto">
               <div class="pb-1">
                 <h4 class="text-[17px] font-medium text-[#27054F]">Leena Siddharth Bhai</h4>
-                <p class="text-[13px] text-[#3B3C4B] mt-0.5"> San Mateo County of Education</p>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">San Mateo County of Education</p>
               </div>
-              <img src="https://i.pravatar.cc/150?img=47" alt="Maya Sharma"
+              <img src="/testimonial/Leena Siddharth Bhai.webp" alt="Leena Siddharth Bhai"
                 class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
             </div>
           </div>
@@ -2519,8 +2580,7 @@
               </svg>
             </div>
             <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              “TCET shaped me as both a person and a professional. Supportive faculty and real-world exposure gave me
-              the confidence to grow, adapt and succeed.”
+              “TCET shaped me as both a person and a professional. Supportive faculty and real-world exposure gave me the confidence to grow, adapt and succeed.”
             </p>
             <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -2530,10 +2590,10 @@
             </div>
             <div class="flex items-end justify-between mt-auto">
               <div class="pb-1">
-                <h4 class="text-[17px] font-medium text-[#27054F]"> Abhijeet Vijaykumar Prabhu</h4>
+                <h4 class="text-[17px] font-medium text-[#27054F]">Abhijeet Vijaykumar Prabhu</h4>
                 <p class="text-[13px] text-[#3B3C4B] mt-0.5">Indian Railways</p>
               </div>
-              <img src="https://i.pravatar.cc/150?img=68" alt="Javier Soto"
+              <img src="https://i.pravatar.cc/150?img=68" alt="Abhijeet Vijaykumar Prabhu"
                 class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
             </div>
           </div>
@@ -2553,8 +2613,7 @@
               </svg>
             </div>
             <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              “TCET built my technical foundation through practical learning, teamwork and faculty guidance, shaping my
-              journey into technology and consulting.”
+              “TCET built my technical foundation through practical learning, teamwork and faculty guidance, shaping my journey into technology and consulting.”
             </p>
             <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -2564,115 +2623,10 @@
             </div>
             <div class="flex items-end justify-between mt-auto">
               <div class="pb-1">
-                <h4 class="text-[17px] font-medium text-[#27054F]"> Ashish Bharat Lal Saraf</h4>
+                <h4 class="text-[17px] font-medium text-[#27054F]">Ashish Bharat Lal Saraf</h4>
                 <p class="text-[13px] text-[#3B3C4B] mt-0.5">Deloitte</p>
               </div>
-              <img src="https://i.pravatar.cc/150?img=42" alt="Alisa Olivia"
-                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
-            </div>
-          </div>
-        </div>
-
-
-        <!-- ================= CARD SET 2 (Exact Duplicate of Set 1 for seamless loop) ================= -->
-
-        <div
-          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
-          <div
-            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
-            style="background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
-          </div>
-          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
-            <div class="mb-4 text-[#C8B8F5]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
-              </svg>
-            </div>
-            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              Within three months, I was leading projects that previously seemed too complex. This training was the key
-              to my promotion.
-            </p>
-            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            </div>
-            <div class="flex items-end justify-between mt-auto">
-              <div class="pb-1">
-                <h4 class="text-[17px] font-medium text-[#27054F]">Maya Sharma</h4>
-                <p class="text-[13px] text-[#3B3C4B] mt-0.5">Data Analyst</p>
-              </div>
-              <img src="https://i.pravatar.cc/150?img=47" alt="Maya Sharma"
-                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
-          <div
-            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
-            style="animation-delay: -1.5s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
-          </div>
-          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
-            <div class="mb-4 text-[#C8B8F5]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
-              </svg>
-            </div>
-            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              I went from guessing on my ad spend to executing targeted digital campaigns after the Business Strategy
-              class.
-            </p>
-            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            </div>
-            <div class="flex items-end justify-between mt-auto">
-              <div class="pb-1">
-                <h4 class="text-[17px] font-medium text-[#27054F]">Javier Soto</h4>
-                <p class="text-[13px] text-[#3B3C4B] mt-0.5">Freelance Producer</p>
-              </div>
-              <img src="https://i.pravatar.cc/150?img=68" alt="Javier Soto"
-                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
-          <div
-            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
-            style="animation-delay: -3s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
-          </div>
-          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
-            <div class="mb-4 text-[#C8B8F5]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
-              </svg>
-            </div>
-            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              The instructor's industry insight is priceless; I've already secured three new clients directly because of
-              the quality I now deliver.
-            </p>
-            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            </div>
-            <div class="flex items-end justify-between mt-auto">
-              <div class="pb-1">
-                <h4 class="text-[17px] font-medium text-[#27054F]">Alisa Olivia</h4>
-                <p class="text-[13px] text-[#3B3C4B] mt-0.5">Marketing Specialist</p>
-              </div>
-              <img src="https://i.pravatar.cc/150?img=42" alt="Alisa Olivia"
+              <img src="https://i.pravatar.cc/150?img=42" alt="Ashish Bharat Lal Saraf"
                 class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
             </div>
           </div>
@@ -2692,8 +2646,7 @@
               </svg>
             </div>
             <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              The practical role-playing exercises in the Leadership course were tough, but now I lead my team with
-              confidence and clarity.
+              “My MBA journey at TCET transformed my vision into reality. Faculty guidance, encouragement and a vibrant learning environment helped me grow with confidence.”
             </p>
             <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -2703,10 +2656,10 @@
             </div>
             <div class="flex items-end justify-between mt-auto">
               <div class="pb-1">
-                <h4 class="text-[17px] font-medium text-[#27054F]">Priya Singh</h4>
-                <p class="text-[13px] text-[#3B3C4B] mt-0.5">Project Manager</p>
+                <h4 class="text-[17px] font-medium text-[#27054F]">Avantika Bhujade</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
               </div>
-              <img src="https://i.pravatar.cc/150?img=5" alt="Priya Singh"
+              <img src="https://i.pravatar.cc/150?img=5" alt="Avantika Bhujade"
                 class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
             </div>
           </div>
@@ -2726,8 +2679,7 @@
               </svg>
             </div>
             <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
-              The Advanced Sports Nutrition certification was rigorous and clinically relevant. It's elevated the advice
-              I give my patients.
+              “TCET gave me the right platform to learn, explore and grow. Supportive faculty, a positive environment and valuable opportunities strengthened my confidence and career readiness.”
             </p>
             <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -2737,10 +2689,309 @@
             </div>
             <div class="flex items-end justify-between mt-auto">
               <div class="pb-1">
-                <h4 class="text-[17px] font-medium text-[#27054F]">Ben Carter</h4>
-                <p class="text-[13px] text-[#3B3C4B] mt-0.5">Business Owner</p>
+                <h4 class="text-[17px] font-medium text-[#27054F]">Eesha Masurkar</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
               </div>
-              <img src="https://i.pravatar.cc/150?img=11" alt="Ben Carter"
+              <img src="https://i.pravatar.cc/150?img=9" alt="Eesha Masurkar"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -1s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “TCET strengthened my technical foundation through practical learning and meaningful exposure. The experience helped me develop problem-solving, teamwork and adaptability for my career.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Amit Kumar Gupta</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=11" alt="Amit Kumar Gupta"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -2.5s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “My MBA journey at TCET enriched my professional growth through workshops, industry exposure and personalised mentoring, helping me develop stronger leadership and professional skills.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Harsh Yogendra Singhal</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=12" alt="Harsh Yogendra Singhal"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CARD SET 2 (Exact Duplicate of Set 1 for seamless loop) ================= -->
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “TCET shaped my career through strong placement support, leadership opportunities and inspiring faculty. The friendships and memories remain cherished.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Leena Siddharth Bhai</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">San Mateo County of Education</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=47" alt="Leena Siddharth Bhai"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -1.5s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “TCET shaped me as both a person and a professional. Supportive faculty and real-world exposure gave me the confidence to grow, adapt and succeed.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Abhijeet Vijaykumar Prabhu</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">Indian Railways</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=68" alt="Abhijeet Vijaykumar Prabhu"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -3s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “TCET built my technical foundation through practical learning, teamwork and faculty guidance, shaping my journey into technology and consulting.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Ashish Bharat Lal Saraf</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">Deloitte</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=42" alt="Ashish Bharat Lal Saraf"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -0.5s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “My MBA journey at TCET transformed my vision into reality. Faculty guidance, encouragement and a vibrant learning environment helped me grow with confidence.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Avantika Bhujade</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=5" alt="Avantika Bhujade"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -2s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “TCET gave me the right platform to learn, explore and grow. Supportive faculty, a positive environment and valuable opportunities strengthened my confidence and career readiness.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Eesha Masurkar</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=9" alt="Eesha Masurkar"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -1s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “TCET strengthened my technical foundation through practical learning and meaningful exposure. The experience helped me develop problem-solving, teamwork and adaptability for my career.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Amit Kumar Gupta</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
+              </div>
+              <img src="/testimonial/Amit Kumar Gupta.png" alt="Amit Kumar Gupta"
+                class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="shrink-0 w-[340px] h-[460px] rounded-2xl relative overflow-hidden shadow-sm bg-[#D9CCFF] p-[2px] flex flex-col">
+          <div
+            class="absolute top-1/2 left-1/2 w-[200%] h-[200%] -translate-x-1/2 -translate-y-1/2 animate-spin-clockwise z-0"
+            style="animation-delay: -2.5s; background: conic-gradient(transparent 0deg, transparent 130deg, #27054F 130deg, #27054F 180deg, transparent 180deg, transparent 310deg, #27054F 310deg, #27054F 360deg);">
+          </div>
+          <div class="relative z-10 bg-[#FAF8FF] rounded-[14px] p-8 flex-grow flex flex-col">
+            <div class="mb-4 text-[#C8B8F5]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M14.017 18L14.017 14.923C14.017 10.842 16.241 8.134 21.017 7.024L21.017 9.832C18.665 10.378 17.522 11.758 17.478 13.91L21.017 13.91L21.017 18L14.017 18ZM3.017 18L3.017 14.923C3.017 10.842 5.241 8.134 10.017 7.024L10.017 9.832C7.665 10.378 6.522 11.758 6.478 13.91L10.017 13.91L10.017 18L3.017 18Z" />
+              </svg>
+            </div>
+            <p class="text-[15.5px] leading-relaxed text-[#3B3C4B] flex-grow mb-4">
+              “My MBA journey at TCET enriched my professional growth through workshops, industry exposure and personalised mentoring, helping me develop stronger leadership and professional skills.”
+            </p>
+            <div class="flex text-[#FFC600] gap-1 mb-6 pt-5 border-t border-[#E8E1F7]">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="flex items-end justify-between mt-auto">
+              <div class="pb-1">
+                <h4 class="text-[17px] font-medium text-[#27054F]">Harsh Yogendra Singhal</h4>
+                <p class="text-[13px] text-[#3B3C4B] mt-0.5">TCET Alumni</p>
+              </div>
+              <img src="https://i.pravatar.cc/150?img=12" alt="Harsh Yogendra Singhal"
                 class="w-14 h-14 rounded-xl object-cover shadow-sm grayscale" />
             </div>
           </div>
@@ -2851,19 +3102,13 @@
         <div class="grid grid-cols-2 md:grid-cols-5 gap-y-8 md:gap-y-0 md:divide-x md:divide-[#52617C]">
 
           <!-- Stat 1 -->
-          <div class="flex flex-col items-center justify-center text-center px-4">
-            <h3 class="font-urbanist text-4xl lg:text-5xl font-medium text-[#FFC600] tracking-tight">80%</h3>
-            <p class="font-manrope text-base lg:text-lg text-[#FFFFFF] mt-1 font-normal tracking-wide">Placement Rate</p>
+            <div class="flex flex-col items-center justify-center text-center px-4">
+            <h3 class="font-urbanist text-4xl lg:text-5xl font-medium text-[#FFC600] tracking-tight">1,000+</h3>
+            <p class="font-manrope text-base lg:text-lg text-[#FFFFFF] mt-1 font-normal tracking-wide">Recruiters
+            </p>
           </div>
-
           <!-- Stat 2 -->
-          <div class="flex flex-col items-center justify-center text-center px-4">
-            <h3 class="font-urbanist text-4xl lg:text-5xl font-medium text-[#FFC600] tracking-tight">20%</h3>
-            <p class="font-manrope text-base lg:text-lg text-[#FFFFFF] mt-1 font-normal tracking-wide">Opted
-              for<br />Higher Studies</p>
-          </div>
-
-          <!-- Stat 3 -->
+         
           <div class="flex flex-col items-center justify-center text-center px-4">
             <h3 class="font-urbanist text-4xl lg:text-5xl font-medium text-[#FFC600] tracking-tight flex items-baseline">
               <span class="text-3xl mr-1 font-medium">₹</span>8.2 <span class="text-xl ml-1 font-medium">LPA</span>
@@ -2880,11 +3125,13 @@
           </div>
 
           <!-- Stat 5 -->
-          <div class="flex flex-col items-center justify-center text-center px-4">
-            <h3 class="font-urbanist text-4xl lg:text-5xl font-medium text-[#FFC600] tracking-tight">1,200+</h3>
-            <p class="font-manrope text-base lg:text-lg text-[#FFFFFF] mt-1 font-normal tracking-wide">Companies Visited
-            </p>
+      
+
+            <div class="flex flex-col items-center justify-center text-center px-4">
+            <h3 class="font-urbanist text-4xl lg:text-5xl font-medium text-[#FFC600] tracking-tight">7000+</h3>
+            <p class="font-manrope text-base lg:text-lg text-[#FFFFFF] mt-1 font-normal tracking-wide">Alumni Working with Leading MNCs</p>
           </div>
+
 
         </div>
       </div>
@@ -3360,7 +3607,7 @@
         <div>
           <div class="text-3xl font-extrabold text-slate-900 tracking-tight mb-1.5">$200K</div>
           <p class="text-sm font-semibold text-slate-800 mb-1">Scholarships Awarded</p>
-          <p class="text-xs text-slate-500 leading-relaxed">Direct grants awarded to TCETU alumni for higher research
+          <p class="text-xs text-slate-500 leading-relaxed">Direct grants awarded to TCET University alumni for higher research
           </p>
         </div>
       </div>
@@ -3519,7 +3766,7 @@
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
                 <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">What is the admission process at
-                  TCETU?</h4>
+                  TCET University?</h4>
               </div>
               <button
                 class="w-8 h-8 rounded-lg bg-[#A2DFEE] flex items-center justify-center text-[#243565] flex-shrink-0 transition-transform hover:scale-105"
@@ -3552,7 +3799,7 @@
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
                 <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">What are the eligibility criteria
-                  for admission to TCETU programmes?</h4>
+                  for admission to TCET University programmes?</h4>
               </div>
               <button
                 class="w-8 h-8 rounded-lg bg-[#A2DFEE] flex items-center justify-center text-[#243565] flex-shrink-0 transition-transform hover:scale-105"
@@ -3584,7 +3831,7 @@
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
                 <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">What is the fee structure for
-                  programmes at TCETU?</h4>
+                  programmes at TCET University?</h4>
               </div>
               <button
                 class="w-8 h-8 rounded-lg bg-[#A2DFEE] flex items-center justify-center text-[#243565] flex-shrink-0 transition-transform hover:scale-105"
@@ -3615,7 +3862,7 @@
             <div class="faq-header flex items-center justify-between">
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
-                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Does TCETU offer scholarships or
+                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Does TCET University offer scholarships or
                   financial assistance to students?</h4>
               </div>
               <button
@@ -3635,7 +3882,7 @@
             <div class="faq-content">
               <div class="faq-inner">
                 <p class="pt-4 pl-8 text-[15px] text-[#3B3C4B] leading-relaxed">
-                  Yes, TCETU offers a range of merit-based scholarships and need-based financial aid. Eligible students
+                  Yes, TCET University offers a range of merit-based scholarships and need-based financial aid. Eligible students
                   can apply for these during the admission cycle.
                 </p>
               </div>
@@ -3647,7 +3894,7 @@
             <div class="faq-header flex items-center justify-between">
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
-                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Does TCETU provide placement and
+                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Does TCET University provide placement and
                   career support?</h4>
               </div>
               <button
@@ -3680,7 +3927,7 @@
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
                 <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Can students from outside Mumbai
-                  apply to TCETU?</h4>
+                  apply to TCET University?</h4>
               </div>
               <button
                 class="w-8 h-8 rounded-lg bg-[#A2DFEE] flex items-center justify-center text-[#243565] flex-shrink-0 transition-transform hover:scale-105"
@@ -3711,7 +3958,7 @@
             <div class="faq-header flex items-center justify-between">
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
-                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Does TCETU offer programmes or
+                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Does TCET University offer programmes or
                   pathways suitable for working professionals?</h4>
               </div>
               <button
@@ -3743,7 +3990,7 @@
             <div class="faq-header flex items-center justify-between">
               <div class="flex items-center gap-4 pr-4">
                 <span class="text-[#2563EB] font-medium text-lg flex-shrink-0">Q</span>
-                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Where is TCETU located?</h4>
+                <h4 class="text-[#243565] font-semibold text-[15px] sm:text-[16px]">Where is TCET University located?</h4>
               </div>
               <button
                 class="w-8 h-8 rounded-lg bg-[#A2DFEE] flex items-center justify-center text-[#243565] flex-shrink-0 transition-transform hover:scale-105"
@@ -3762,7 +4009,7 @@
             <div class="faq-content">
               <div class="faq-inner">
                 <p class="pt-4 pl-8 text-[15px] text-[#3B3C4B] leading-relaxed">
-                  TCETU is proudly located in Mumbai, Maharashtra. Our campus is equipped with state-of-the-art
+                  TCET University is proudly located in Mumbai, Maharashtra. Our campus is equipped with state-of-the-art
                   facilities and is easily accessible via public transportation.
                 </p>
               </div>
@@ -3846,7 +4093,7 @@
 
         <span
           class="block text-[11px] font-bold tracking-[0.12em] text-[#1264D9] uppercase font-['Manrope',_sans-serif]">
-          Join our community now.
+          Shape Your Future at TCET University.
         </span>
       </div>
 
